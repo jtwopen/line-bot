@@ -56,7 +56,7 @@ def handle_message(event):
     r = '請輸入aliswell進入第一道謎題'
     if msg == 'aliswell':
         r = '第一關:請問阿美的生日是~?'
-         f msg == '11':
+        if msg == '11':
             r = '答對了!!下一題的題目是...'
         else r = '答錯了,請再想想'
 
