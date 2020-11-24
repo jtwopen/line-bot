@@ -54,12 +54,11 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     r = '請輸入aliswell進入第一道謎題'
-    while True:
-        if msg == 'aliswell':
-            r = '第一關:請問阿美的生日是~?'
-            if msg == '11':
-                r = '答對了!!下一題的題目是...'
-            else r = '答錯了,請再想想'
+    if msg == 'aliswell':
+        r = '第一關:請問阿美的生日是~?'
+         f msg == '11':
+            r = '答對了!!下一題的題目是...'
+        else r = '答錯了,請再想想'
 
     line_bot_api.reply_message(
         event.reply_token,
