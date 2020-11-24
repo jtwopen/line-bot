@@ -1,3 +1,18 @@
+#如何註冊Line機器人
+#google搜尋 line messaging api
+#登入之後Start using Messaging API
+#按加號輸入provider
+#寫python檔(SDK) software development kit
+#搜尋 python line sdk
+#pip install line-bot.sdk
+#複製usage貼上subline
+#複製貼上Api跟Webhook
+#註冊heroku
+#下載安裝 CLI
+#Creat New app
+
+
+
 from flask import Flask, request, abort
 
 from linebot import (
@@ -37,9 +52,10 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    msg = event.message.text
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text))
+        TextSendMessage(text='你吃飯了嗎'))
 
 
 if __name__ == "__main__":
