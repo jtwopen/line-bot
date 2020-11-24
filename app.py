@@ -52,17 +52,15 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    print('歡迎光臨冏尼解謎迴圈')
     msg = event.message.text
-    r = '不對喔'
-    if msg in ['Hi', 'hi']:
-        r = '嗨'
-    elif msg == '你吃飯了嗎':
-        r = '還沒'
-    elif msg == '你是誰':
-        r = '我是機器人'
-    elif '訂位' in msg:
-        r = '您想訂位，是嗎?'
+    r = '請輸入aliswell進入第一道謎題'
+    while True:
+        if msg == 'aliswell':
+            r = '第一關:請問阿美的生日是~?'
+            if msg == '11':
+                r = '答對了!!下一題的題目是...'
+            else r = '答錯了,請再想想'
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=r))
