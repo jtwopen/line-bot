@@ -52,6 +52,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    print('歡迎光臨冏尼解謎迴圈')
     msg = event.message.text
     r = '不對喔'
     if msg in ['Hi', 'hi']:
