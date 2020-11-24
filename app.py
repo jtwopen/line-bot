@@ -58,7 +58,7 @@ def handle_message(event):
         r = '第一關:請問阿美的生日是~?'
     elif msg == '11':
         r = '答對了!!下一題的題目是...'
-    else r = '答錯了,請再想想'
+    
 
     line_bot_api.reply_message(
         event.reply_token,
